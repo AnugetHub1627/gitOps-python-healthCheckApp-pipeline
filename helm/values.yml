@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: your_docker_username/gitops-python-app # Update this with your Docker username
+  pullPolicy: IfNotPresent
+  tag: "latest" # Argo CD will dynamically overwrite this tag
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
